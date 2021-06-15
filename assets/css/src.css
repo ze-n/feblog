@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    transition-property:color,opacity,background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+body{
+    --beige-100:#FFFEFC;
+    --beige-300:#F9F5F1;
+    --black-800:#1B1B1B;
+    --black-900:#111111;
+    --accent:#CF534A;
+    --theme-button-fill:#111111;
+    --theme-button-opacity:.7;
+   
+}
+.bg-beige-100{
+    background-color:var(--beige-100);
+}
+.bg-beige-300{
+    background-color:var(--beige-300);
+}
+.bg-black-800{
+    background-color:var(--black-800);
+}
+.bg-black-900{
+    background-color:var(--black-900);
+}
+.bg-accent{
+    background-color:var(--accent);
+}
+
+.text-beige-100{
+    color:var(--beige-100);
+}
+.text-beige-300{
+    color:var(--beige-300);
+}
+.text-black-800{
+    color:var(--black-800);
+}
+.text-black-900{
+    color:var(--black-900);
+}
+.text-accent{
+    color:var(--accent);
+}
+
+
+.border-black-900{
+    border-color:var(--black-900);
+}
+.border-beige-100{
+    border-color:var(--beige-100);
+}
+.border-beige-300{
+    border-color:var(--beige-300);
+}
+.border-accent{
+    border-color:var(--accent);
+}
+
+ /* setting colors of logo so that i can change them 
+according to theme selected by user */
+.logo .f-box{
+    stroke:var(--black-900);
+}
+.logo .f{
+    fill : var(--black-900);
+}
+.logo .e-box{
+    stroke: var(--black-900);
+    fill: var(--black-900);
+}
+.logo .e{
+    fill: var(--beige-100);
+}
+.logo .blog{
+    fill: var(--black-900);
+}
+
+
+/* theme toggle button */
+.theme-toggle-button .inner{
+    fill: var(--accent);
+    opacity:var(--theme-button-opacity);
+}
+.theme-toggle-button .outer{
+    fill : var(--theme-button-fill);
+}
+
+
+/* nav toggle button */
+
+.nav-toggle-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    cursor:pointer;
+    display:none;
+}
+.toggle-button-bar{
+    height:2px;
+    width:2rem;
+    margin-bottom:.3rem;
+    background:var(--black-900);
+    border-radius:500px;
+    transition-property: transform,color,opacity,background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transform-origin:right;
+}
+.toggle-button-bar:last-of-type{
+    margin-bottom:0;
+}
+.toggle-button-bar-1-clicked{
+    transform:scaleX(.5);
+}
+.toggle-button-bar-2-clicked{
+    transform:scaleX(.7);
+}
+
+
+
+/* style that are toggled when nav toggle button gets clicked */
+
+.nav-toggle-button-clicked{
+    transform:scaleY(1);
+}
+
+
+/* cta buttons */
+.pri-btn,.sec-btn{
+    @apply px-4 py-2 rounded
+}
+.pri-btn{
+    @apply bg-accent border-2 border-accent text-beige-100
+}
+.sec-btn{
+    @apply border-2 border-black-900 text-black-900
+}
+
+
+
+
+.dark-theme{
+    --beige-100:#111111;/*--black-900*/
+    --beige-300:#1B1B1B;/*--black-800*/
+    --black-800:#F9F5F1;/*--beige-300*/
+    --black-900:#FFFEFC;/*--beige-100*/
+    --accent:#D4FFC0;
+    --theme-button-fill:var(--accent);
+    --theme-button-opacity:0;
+
+}
+
+@media screen and (max-width:767px){
+    .nav-toggle-button{
+        display:block;
+    }
+    nav{
+        width:100vw;
+        min-height:50vw;
+        position:absolute;
+        left:0;
+        top:4rem;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        transition-property: transform,color,opacity,background-color;
+	    transition-duration: .3s;
+	    transition-timing-function: ease;
+        transform:scaleY(0); 
+        transform-origin:top center;
+    }
+    nav ul{
+        flex-direction:column;
+    }
+    nav ul li{
+        margin-left:0 !important;
+        margin-bottom:1rem;
+        
+    }
+    .theme-toggle-button{
+        margin-right:1rem;
+    }
+}

@@ -1,0 +1,61 @@
+body{
+    --beige-100:#FFFEFC;
+    --beige-300:#F9F5F1;
+    --black-800:#1B1B1B;
+    --black-900:#111111;
+    --accent:#CF534A;
+    --theme-button-fill:#111111;
+    --theme-button-opacity:.7;
+   
+}
+.bg-beige-100{
+    background-color:var(--beige-100);
+}
+.bg-beige-300{
+    background-color:var(--beige-300);
+}
+.bg-black-800{
+    background-color:var(--black-800);
+}
+.bg-black-900{
+    background-color:var(--black-900);
+}
+.bg-accent{
+    background-color:var(--accent);
+}
+
+.text-beige-100{
+    color:var(--beige-100);
+}
+.text-beige-300{
+    color:var(--beige-300);
+}
+.text-black-800{
+    color:var(--black-800);
+}
+.text-black-900{
+    color:var(--black-900);
+}
+.text-accent{
+    color:var(--accent);
+}
+
+
+.border-black-900{
+    border-color:var(--black-900);
+}
+.border-beige-100{
+    border-color:var(--beige-100);
+}
+
+
+
+.dark-theme{
+    --beige-100:#111111;/*--black-900*/
+    --beige-300:#1B1B1B;/*--black-800*/
+    --black-800:#F9F5F1;/*--beige-300*/
+    --black-900:#FFFEFC;/*--beige-100*/
+    --theme-button-fill:var(--accent);
+    --theme-button-opacity:0;
+
+}

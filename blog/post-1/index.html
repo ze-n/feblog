@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/feblog/assets/css/tail.css">
+    <title>FE-BLOG | ZEN</title>
+</head>
+<body class="font-sans bg-beige-100 text-black-900">
+    <header class="bg-beige-100 h-16 w-screen fixed z-50 top-0 left-0">
+    <!--header inner container-->
+    <div class="max-w-7xl w-screen mx-auto my-0 h-full px-8 flex justify-between items-center">
+        
+        <!--logo-->
+        <div class="w-28">
+            <svg class="logo" width="111" height="34" viewBox="0 0 111 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="f-box" x="1" y="4" width="21" height="26"  stroke-width="2"/>
+                <path class="f"  d="M7.94815 23H10.2546V18.4936H14.6918V16.592H10.2546V13.9925H15.1712V12.0909H7.94815V23Z" />
+                <rect class="e-box" x="24.3569" y="19.7892" width="21" height="26" transform="rotate(-61.3698 24.3569 19.7892)" stroke-width="2"/>
+                <path class="e" d="M43.7425 22.8759L47.2749 16.4052L45.6058 15.494L43.1786 19.9403L40.8923 18.6922L43.1281 14.5966L41.459 13.6854L39.2232 17.781L36.9416 16.5355L39.3586 12.1079L37.6895 11.1967L34.1673 17.6488L43.7425 22.8759Z" />
+                <path class="blog" d="M68.2784 22H72.7386C75.4432 22 76.6648 20.6534 76.6648 18.8693C76.6648 17.0682 75.4034 16.0511 74.25 15.9886V15.875C75.3182 15.6023 76.2102 14.875 76.2102 13.4205C76.2102 11.6989 75.017 10.3636 72.5398 10.3636H68.2784V22ZM70.0341 20.4943V16.767H72.6307C74.0398 16.767 74.9205 17.6761 74.9205 18.7841C74.9205 19.7614 74.2557 20.4943 72.5682 20.4943H70.0341ZM70.0341 15.3977V11.858H72.4318C73.8239 11.858 74.4886 12.5909 74.4886 13.5568C74.4886 14.6818 73.5682 15.3977 72.3864 15.3977H70.0341ZM78.7472 22H85.7756V20.4886H80.5028V10.3636H78.7472V22ZM97.4332 16.1818C97.4332 12.4602 95.206 10.2045 92.1946 10.2045C89.1719 10.2045 86.9503 12.4602 86.9503 16.1818C86.9503 19.8977 89.1719 22.1591 92.1946 22.1591C95.206 22.1591 97.4332 19.9034 97.4332 16.1818ZM95.6946 16.1818C95.6946 19.017 94.1946 20.5568 92.1946 20.5568C90.1889 20.5568 88.6946 19.017 88.6946 16.1818C88.6946 13.3466 90.1889 11.8068 92.1946 11.8068C94.1946 11.8068 95.6946 13.3466 95.6946 16.1818ZM107.497 14.0398H109.298C108.906 11.7727 106.969 10.2045 104.457 10.2045C101.446 10.2045 99.2472 12.4716 99.2472 16.1875C99.2472 19.8693 101.384 22.1591 104.537 22.1591C107.361 22.1591 109.378 20.3068 109.378 17.3693V16.0455H104.804V17.4943H107.679C107.639 19.3693 106.401 20.5568 104.537 20.5568C102.486 20.5568 100.991 19.0057 100.991 16.1761C100.991 13.358 102.497 11.8068 104.469 11.8068C106.014 11.8068 107.06 12.6591 107.497 14.0398Z" />
+            </svg>
+
+        </div>
+
+        
+        <!--nav-->
+        <nav class="bg-beige-100">
+            <ul class="w-94 flex justify-center items-center">
+                <li><a href="/feblog/index.html">Home</a></li>
+                <li class="ml-8"><a href="#">About</a></li>
+                <li class="ml-8"><a href="#">Posts</a></li>
+            </ul>
+        </nav>
+
+        <!--toggle buttons-->
+        <div class="h-full flex items-center">
+
+                <!--theme toggle button-->
+                <div class="w-28 flex justify-end">
+                <svg class="theme-toggle-button cursor-pointer" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="inner"  d="M17.5 5.83333C15.3739 5.83718 13.3361 6.68347 11.8327 8.18683C10.3293 9.6902 9.48304 11.7281 9.47919 13.8542C9.47919 17.4562 11.6521 19.5271 12.9063 20.4167H22.0938C23.3479 19.5271 25.5209 17.4562 25.5209 13.8542C25.5209 9.43541 21.9188 5.83333 17.5 5.83333Z" />
+                    <path class="outer" d="M17.5 32.0833C19.1042 32.0833 20.4167 30.7708 20.4167 29.1667H14.5833C14.5833 30.7708 15.8958 32.0833 17.5 32.0833ZM11.6667 24.7917H23.3333V27.7083H11.6667V24.7917ZM17.5 2.91667C11.4625 2.91667 6.5625 7.81667 6.5625 13.8542C6.5625 19.425 10.4417 22.4 12.0604 23.3333H22.9396C24.5583 22.4 28.4375 19.425 28.4375 13.8542C28.4375 7.81667 23.5375 2.91667 17.5 2.91667ZM22.0938 20.4167H12.9063C11.6521 19.5271 9.47917 17.4563 9.47917 13.8542C9.47917 9.43542 13.0813 5.83334 17.5 5.83334C21.9188 5.83334 25.5208 9.43542 25.5208 13.8542C25.5208 17.4563 23.3479 19.5271 22.0938 20.4167Z" />
+                </svg>
+            </div>
+
+            <!--nav toggle button-->
+            <div class="nav-toggle-button">
+                <div class="toggle-button-bar toggle-button-bar-1"></div>
+                <div class="toggle-button-bar toggle-button-bar-2"></div>
+                <div class="toggle-button-bar toggle-button-bar-3"></div>
+            </div>
+
+            </div>
+
+
+
+        </div>
+</header>
+    <main class="mt-16" >
+        <section class="w-screen py-8 px-6">
+    <!-- post container-->
+    <div class="max-w-3xl mx-auto my-0 shadow border-2 border-beige-300">
+        <header class=" bg-beige-300 px-9  py-4 rounded shadow flex md:justify-between flex-col md:flex-row md:items-center">    
+            <div class=" h-full order-1 md:order-first">
+                <span class=" uppercase sm:text-lg">June 15, 2021</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl leading-none font-bold uppercase mt-2">My favourite <br>vscode themes</h2>
+            </div>
+            <img src="/feblog/assets/images/post-1/post-1-header.svg" alt="post image" class="mb-6 w-32 md:mb-0 ">
+        </header>
+        <main class="px-8 py-16">
+            <section>
+    <ul>
+        <li class="mb-8">
+            <h2 class="text-lg md:text-2xl md:font-bold text-semibold mb-4">GATITO THEME</h2>
+            <img class="mb-4"  src="/feblog/assets/images/post-1/gatitohtml.png" alt="html syntax color for gatito theme">
+            <img class="w-1/2" src="/feblog/assets/images/post-1/gatitocss.png" alt="css syntax color for gatito theme">
+
+        </li>
+        <li class="mb-8">
+            <h2 class="text-lg md:text-2xl md:font-bold text-semibold mb-4">HORIZON THEME</h2>
+            <img class="mb-4"  src="/feblog/assets/images/post-1/horizonhtml.png" alt="html syntax color for horizon theme">
+            <img class="w-1/2" src="/feblog/assets/images/post-1/horizoncss.png" alt="css syntax color for horizon theme">
+
+        </li>
+        <li>
+            <h2 class="text-lg md:text-2xl md:font-bold text-semibold mb-4">SYNTHWAVE 84</h2>
+            <img  class="mb-4" src="/assets/images/post-1/synthwavehtml.png" alt="html syntax color for synthwave theme">
+            <img class="w-1/2" src="/assets/images/post-1/synthwavecss.png" alt="css syntax color for synthwave theme">
+
+        </li>
+    </ul>
+</section>
+        </main>
+    </div>
+</section>
+    </main>
+    <aside>
+        <section class="w-screen py-8 px-6">
+    <div class="bg-beige-300 max-w-3xl mx-auto my-0 px-6 md:p-8 py-16 flex flex-col border-2 border-beige-300">
+
+        <div class="mx-auto md:mx-0">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-14">RECENT POSTS --></h2>
+                
+                <div class="bg-beige-100 max-w-xs sm:max-w-sm md:max-w-full px-9  py-8 rounded shadow flex  flex-col md:flex-row md:items-center md:justify-between">
+    <!--text container-->
+    <div class=" h-full order-1 md:order-first">
+        <span class=" uppercase sm:text-lg">June 15, 2021</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl leading-none font-bold uppercase mt-2">My favourite <br>vscode themes</h2>
+        <a href="/blog/post-1/" class="pri-btn inline-block mt-4 text-sm sm:text-base">Read More</a>
+    </div>
+    <img src="/feblog/assets/images/post-1/post-1-header.svg" alt="post image" class="mb-6 md:mb-0 w-1/2 md:w-1/4">
+</div>
+                
+        </div>
+    </div>
+</section>
+    </aside>
+    <script src="/assets/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+ @import "darktheme.css"
+ /* setting colors of logo so that i can change them 
+according to theme selected by user */
+.logo .f-box{
+    stroke:var(--black-900);
+}
+.logo .f{
+    fill : var(--black-900);
+}
+.logo .e-box{
+    stroke: var(--black-900);
+    fill: var(--black-900);
+}
+.logo .e{
+    fill: var(--beige-100);
+}
+.logo .blog{
+    fill: var(--black-900);
+}
+
+
+/* theme toggle button */
+.theme-toggle-button .inner{
+    fill: var(--accent);
+    opacity:var(--theme-button-opacity);
+}
+.theme-toggle-button .outer{
+    fill : var(--theme-button-fill);
+}
+
+
+/* nav toggle button */
+
+.nav-toggle-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    cursor:pointer;
+    display:none;
+}
+.toggle-button-bar{
+    height:2px;
+    width:2rem;
+    margin-bottom:.3rem;
+    background:var(--black-900);
+    border-radius:500px;
+    transition-property: transform,color,opacity,background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transform-origin:right;
+}
+.toggle-button-bar:last-of-type{
+    margin-bottom:0;
+}
+.toggle-button-bar-1-clicked{
+    transform:scaleX(.5);
+}
+.toggle-button-bar-2-clicked{
+    transform:scaleX(.7);
+}
+
+
+
+/* style that are toggled when nav toggle button gets clicked */
+
+.nav-toggle-button-clicked{
+    transform:scaleY(1);
+}
